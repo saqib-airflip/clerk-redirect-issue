@@ -6,7 +6,7 @@ export default function Home() {
       <header>
         <UserButton afterSignOutUrl="/" />
       </header>
-      <OrganizationProfile />
+      <OrganizationProfile afterLeaveOrganizationUrl="/" routing="path" path="/" />
       <div>Your page&apos;s content can go here.</div>
     </>
   )
