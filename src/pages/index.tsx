@@ -1,4 +1,4 @@
-import { UserButton } from "@clerk/nextjs";
+import { OrganizationProfile, UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <header>
         <UserButton afterSignOutUrl="/" />
       </header>
+      <OrganizationProfile />
       <div>Your page&apos;s content can go here.</div>
     </>
   )
