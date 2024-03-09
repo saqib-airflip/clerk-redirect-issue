@@ -3,22 +3,22 @@ import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from '@clerk/nex
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <ClerkProvider {...pageProps}>
-      <SignedIn>
-        <Component {...pageProps} />
-      </SignedIn>
-      <SignedOut>
-        <RedirectToSignIn />
-      </SignedOut>
-    </ClerkProvider>
-  )
-
   // return (
-  //   <ClerkProvider>
-  //     <Component {...pageProps} />
+  //   <ClerkProvider {...pageProps}>
+  //     <SignedIn>
+  //       <Component {...pageProps} />
+  //     </SignedIn>
+  //     <SignedOut>
+  //       <RedirectToSignIn />
+  //     </SignedOut>
   //   </ClerkProvider>
   // )
+
+  return (
+    <ClerkProvider>
+      <Component {...pageProps} />
+    </ClerkProvider>
+  )
 }
 
 export default MyApp;
